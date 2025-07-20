@@ -1,9 +1,19 @@
 import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-
+import { useKeenSlider } from "keen-slider/react"
+import "keen-slider/keen-slider.min.css"
+import TourCard from './Tourcard';
 const Tours = () => {
   const [filter_id, setFilter] = useState(1)
   const { t } = useLanguage();
+
+  const [sliderRef] = useKeenSlider({
+    loop: true,
+    slides: {
+      perView: 1,
+      spacing: 0,
+    },
+  })
 
   const tours = [
     {
@@ -238,7 +248,8 @@ const Tours = () => {
         </div>
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        {/* Grid visible solo en pantallas md y mayores */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {tours.filter(tour => tour.category === filter_id).map((tour) => (
             <div
               key={tour.id}
@@ -279,6 +290,23 @@ const Tours = () => {
             </div>
           ))}
         </div>
+
+        {/* Carrusel en pantallas pequeñas */}
+        <div className="md:hidden">
+          <div ref={sliderRef} className="keen-slider">
+            {tours
+              .filter((tour) => tour.category === filter_id)
+              .map((tour) => (
+                <div
+                  key={tour.id}
+                  className="keen-slider__slide px-4"
+                >
+                  <TourCard key={tour.id} tour={tour} />
+                </div>
+              ))}
+          </div>
+        </div>
+
 
       </div>
     </section>
