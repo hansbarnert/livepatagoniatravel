@@ -1,19 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import TourCard from './Tourcard';
+import { useIsMobile } from './isMobile';
 const Tours = () => {
   const [filter_id, setFilter] = useState(1)
   const { t } = useLanguage();
 
-  const [sliderRef] = useKeenSlider({
+  const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
     slides: {
       perView: 1,
       spacing: 0,
     },
   })
+
+  useEffect(() => {
+    if (instanceRef.current) {
+      instanceRef.current.update(); // Fuerza recalculo del tamaño y posición de slides
+    }
+  }, [filter_id]);
+  const isMobile = useIsMobile()
 
   const tours = [
     {
@@ -248,64 +256,26 @@ const Tours = () => {
         </div>
 
 
-        {/* Grid visible solo en pantallas md y mayores */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-          {tours.filter(tour => tour.category === filter_id).map((tour) => (
-            <div
-              key={tour.id}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full"
-            >
-              {/* Imagen */}
-              <div className="relative">
-                <img
-                  src={tour.image}
-                  alt={tour.title}
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-
-              {/* Contenido */}
-              <div className="p-6 flex flex-col justify-between flex-1 h-full">
-                {/* Título y descripción */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{tour.title}</h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed text-justify">
-                    {tour.description}
-                  </p>
-                </div>
-
-                {/* Duración + precio + botón */}
-                <div className="flex flex-col justify-between flex-1">
-                  <div className="flex items-center justify-between mt-auto">
-                    <div>
-                      <span className="text-2xl font-bold text-gray-900">{tour.price}</span>
-                      <span className="text-gray-500 text-sm">{t('tours.person')}</span>
-                    </div>
-                    <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition-colors duration-300">
-                      {t('tours.book')}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Carrusel en pantallas pequeñas */}
-        <div className="md:hidden">
-          <div ref={sliderRef} className="keen-slider">
-            {tours
-              .filter((tour) => tour.category === filter_id)
-              .map((tour) => (
-                <div
-                  key={tour.id}
-                  className="keen-slider__slide px-4"
-                >
-                  <TourCard key={tour.id} tour={tour} />
+        {isMobile ? (
+          // Carrusel para móviles
+          <div className="block">
+            <div ref={sliderRef} className="keen-slider">
+              {tours.filter(tour => tour.category === filter_id).map((tour) => (
+                <div key={tour.id} className="keen-slider__slide w-full px-4">
+                  <TourCard tour={tour} />
                 </div>
               ))}
+            </div>
           </div>
-        </div>
+        ) : (
+          // Grid para pantallas medianas en adelante
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+            {tours.filter(tour => tour.category === filter_id).map((tour) => (
+              <TourCard key={tour.id} tour={tour} />
+            ))}
+          </div>
+        )}
+
 
 
       </div>
