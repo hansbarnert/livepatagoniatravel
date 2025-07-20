@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -47,37 +47,24 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Popular Tours */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t('footer.tours.popular')}</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">{t('tours.torres.title')}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">{t('tours.ice.title')}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">{t('tours.photo.title')}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">{t('tours.puma.title')}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">{t('tours.fitz.title')}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">{t('contact.form.tour.custom')}</a></li>
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('footer.contact.info')}</h3>
             <div className="space-y-3">
-              <div className="flex items-start space-x-3">
+              <a href='https://maps.app.goo.gl/1qpWgAX4KbMV7B9z5' className="flex items-start space-x-3 block">
                 <MapPin className="h-5 w-5 text-orange-500 mt-0.5" />
                 <div>
-                  <p className="text-gray-400">Puerto Natales, Chile</p>
-                  <p className="text-gray-400 text-sm">Magallanes Region</p>
+                  <p className="text-gray-400">Arturo Prat 86</p>
+                  <p className="text-gray-400 text-sm">Puerto Natales, Chile</p>
                 </div>
-              </div>
+              </a>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-orange-500" />
-                <p className="text-gray-400">+56 9 1234 5678</p>
+                <p className="text-gray-400">+569 6496 8800</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-orange-500" />
-                <p className="text-gray-400">info@patagoniaexpeditions.com</p>
+                <p className="text-gray-400">contacto.livepatagoniatravel@gmail.com</p>
               </div>
             </div>
           </div>
@@ -85,11 +72,14 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              {t('footer.copyright')}
+            <a href="cloudanddigital.cl" className="text-gray-400 hover:text-orange-500 text-sm transition-colors"><p className="text-sm text-gray-400">
+              © {new Date().getFullYear()} {t('footer.copyright')}
             </p>
+            </a>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">{t('footer.privacy')}</a>
+              <p className="text-sm text-gray-400">
+                {t('footer.privacy')}
+              </p>
               <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">{t('footer.terms')}</a>
               <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">{t('footer.cookies')}</a>
             </div>

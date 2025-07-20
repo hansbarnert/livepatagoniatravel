@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, Clock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-
+import { FaWhatsapp } from 'react-icons/fa';
 const Contact = () => {
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
@@ -43,18 +43,18 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">{t('contact.info.title')}</h3>
-              
+
               <div className="space-y-4">
-                <div className="flex items-start space-x-4">
+                <a href="https://wa.me/56964968800" className="flex items-start space-x-4">
                   <div className="bg-orange-500 p-3 rounded-lg">
-                    <Phone className="h-6 w-6 text-white" />
+                    <FaWhatsapp className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold">{t('contact.phone')}</h4>
-                    <p className="text-gray-300">+56 9 1234 5678</p>
-                    <p className="text-gray-400 text-sm">{t('contact.phone.available')}</p>
+                    <h4 className="text-white font-semibold">{t('contact.whatsapp')}</h4>
+                    <p className="text-gray-300">+569 6496 8800</p>
+                    <p className="text-gray-400 text-sm">{t('contact.whatsapp.available')}</p>
                   </div>
-                </div>
+                </a>
 
                 <div className="flex items-start space-x-4">
                   <div className="bg-orange-500 p-3 rounded-lg">
@@ -62,21 +62,25 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">{t('contact.email')}</h4>
-                    <p className="text-gray-300">info@patagoniaexpeditions.com</p>
+                    <p className="text-gray-300">contacto.livepatagoniatravel@gmail.com</p>
                     <p className="text-gray-400 text-sm">{t('contact.email.response')}</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                <a
+                  href="https://maps.app.goo.gl/1qpWgAX4KbMV7B9z5"
+                  className="flex items-start space-x-4 block"
+                >
                   <div className="bg-orange-500 p-3 rounded-lg">
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">{t('contact.location')}</h4>
-                    <p className="text-gray-300">Puerto Natales, Chile</p>
+                    <p className="text-gray-300">Arturo Prat 86, Puerto Natales, Chile</p>
                     <p className="text-gray-400 text-sm">{t('contact.location.desc')}</p>
                   </div>
-                </div>
+                </a>
+
 
                 <div className="flex items-start space-x-4">
                   <div className="bg-orange-500 p-3 rounded-lg">
@@ -85,24 +89,16 @@ const Contact = () => {
                   <div>
                     <h4 className="text-white font-semibold">{t('contact.hours')}</h4>
                     <p className="text-gray-300">{t('contact.hours.weekday')}</p>
-                    <p className="text-gray-300">{t('contact.hours.weekend')}</p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-blue-600 to-orange-600 p-6 rounded-2xl">
-              <h4 className="text-white font-bold text-lg mb-2">{t('contact.offer.title')}</h4>
-              <p className="text-white/90">
-                {t('contact.offer.desc')}
-              </p>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-2xl shadow-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('contact.form.title')}</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>

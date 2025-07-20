@@ -206,7 +206,7 @@ const Tours = () => {
             {t('tours.subtitle')}
           </p>
         </div>
-        <div className="filters flex gap-2 mb-2">
+        <div className="filters flex gap-2 mb-4">
           {places_filters.map((filter) => (
             <div key={filter.id}>
               <button className={`${filter_id === filter.id ? "bg-orange-500 text-white" : "bg-white-500 text-black"} border border-orange-500 hover:bg-orange-600 hover:text-white px-6 py-2 rounded-full font-semibold transition-colors duration-30`}
@@ -218,9 +218,13 @@ const Tours = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {tours.filter(tour => tour.category === filter_id).map((tour) => (
-            <div key={tour.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div
+              key={tour.id}
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full"
+            >
+              {/* Imagen */}
               <div className="relative">
                 <img
                   src={tour.image}
@@ -229,31 +233,33 @@ const Tours = () => {
                 />
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{tour.title}</h3>
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed text-justify">{tour.description}</p>
-
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <div className="flex items-center space-x-1">
-                    <Clock className="h-4 w-4" />
-                    <span>{tour.duration} {t('tours.duration')}</span>
-                  </div>
+              {/* Contenido */}
+              <div className="p-6 flex flex-col justify-between flex-1 h-full">
+                {/* Título y descripción */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{tour.title}</h3>
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed text-justify">
+                    {tour.description}
+                  </p>
                 </div>
 
-
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-2xl font-bold text-gray-900">{tour.price}</span>
-                    <span className="text-gray-500 text-sm">{t('tours.person')}</span>
+                {/* Duración + precio + botón */}
+                <div className="flex flex-col justify-between flex-1">
+                  <div className="flex items-center justify-between mt-auto">
+                    <div>
+                      <span className="text-2xl font-bold text-gray-900">{tour.price}</span>
+                      <span className="text-gray-500 text-sm">{t('tours.person')}</span>
+                    </div>
+                    <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition-colors duration-300">
+                      {t('tours.book')}
+                    </button>
                   </div>
-                  <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition-colors duration-300">
-                    {t('tours.book')}
-                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
