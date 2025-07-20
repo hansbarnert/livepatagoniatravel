@@ -1,4 +1,3 @@
-import React from 'react';
 import { Mountain, Facebook, Instagram, Twitter, Youtube, MapPin, Phone, Mail } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 

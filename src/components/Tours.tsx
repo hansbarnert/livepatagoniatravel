@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Clock, Users, Star } from 'lucide-react';
+import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Tours = () => {
@@ -206,17 +205,38 @@ const Tours = () => {
             {t('tours.subtitle')}
           </p>
         </div>
-        <div className="filters flex gap-2 mb-4">
+        {/* Botones visibles solo en pantallas grandes */}
+        <div className="filters hidden md:flex gap-2 mb-4">
           {places_filters.map((filter) => (
             <div key={filter.id}>
-              <button className={`${filter_id === filter.id ? "bg-orange-500 text-white" : "bg-white-500 text-black"} border border-orange-500 hover:bg-orange-600 hover:text-white px-6 py-2 rounded-full font-semibold transition-colors duration-30`}
-                onClick={() =>
-                  setFilter(filter.id)}>
+              <button
+                className={`${filter_id === filter.id
+                  ? "bg-orange-500 text-white"
+                  : "bg-white-500 text-black"
+                  } border border-orange-500 hover:bg-orange-600 hover:text-white px-6 py-2 rounded-full font-semibold transition-colors duration-300`}
+                onClick={() => setFilter(filter.id)}
+              >
                 {filter.name}
               </button>
             </div>
           ))}
         </div>
+
+        {/* Select solo visible en pantallas pequeñas */}
+        <div className="md:hidden mb-4">
+          <select
+            value={filter_id}
+            onChange={(e) => setFilter(Number(e.target.value))}
+            className="w-full border border-orange-500 px-4 py-2 rounded-full text-black font-semibold bg-white-500"
+          >
+            {places_filters.map((filter) => (
+              <option key={filter.id} value={filter.id}>
+                {filter.name}
+              </option>
+            ))}
+          </select>
+        </div>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {tours.filter(tour => tour.category === filter_id).map((tour) => (
