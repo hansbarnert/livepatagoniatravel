@@ -18,17 +18,8 @@ const Footer = () => {
               {t('footer.company.desc')}
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a href="https://www.instagram.com/turismo.live.patagonia.travel/" className="text-gray-400 hover:text-orange-500 transition-colors">
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -38,11 +29,9 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{t('footer.links')}</h3>
             <ul className="space-y-2">
               <li><a href="#tours" className="text-gray-400 hover:text-orange-500 transition-colors">{t('nav.tours')}</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-orange-500 transition-colors">{t('nav.services')}</a></li>
               <li><a href="#gallery" className="text-gray-400 hover:text-orange-500 transition-colors">{t('nav.gallery')}</a></li>
-              <li><a href="#testimonials" className="text-gray-400 hover:text-orange-500 transition-colors">{t('nav.testimonials')}</a></li>
               <li><a href="#contact" className="text-gray-400 hover:text-orange-500 transition-colors">{t('nav.contact')}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.about')}</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-orange-500 transition-colors">{t('footer.about')}</a></li>
             </ul>
           </div>
 

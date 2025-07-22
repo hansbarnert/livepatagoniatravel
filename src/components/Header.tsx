@@ -28,40 +28,35 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <Mountain className={`h-8 w-8 transition-colors ${
-              isScrolled ? 'text-blue-800' : 'text-white'
-            }`} />
-            <span className={`text-xl font-bold transition-colors ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}>
+            <Mountain className={`h-8 w-8 transition-colors ${isScrolled ? 'text-blue-800' : 'text-white'
+              }`} />
+            <span className={`text-xl font-bold transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'
+              }`}>
               {t('company.name')}
             </span>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            {['tours', 'services', 'gallery', 'testimonials', 'contact'].map((item) => (
+            {['tours', 'services', 'gallery', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className={`text-sm font-medium transition-colors hover:text-orange-500 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-orange-500 ${isScrolled ? 'text-gray-700' : 'text-white'
+                  }`}
               >
                 {t(`nav.${item}`)}
               </button>
             ))}
-            
+
             <button
               onClick={toggleLanguage}
-              className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-orange-500 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-orange-500 ${isScrolled ? 'text-gray-700' : 'text-white'
+                }`}
             >
               <Globe className="h-4 w-4" />
               <span>{language === 'en' ? 'ES' : 'EN'}</span>
@@ -70,9 +65,8 @@ const Header = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden transition-colors ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}
+            className={`md:hidden transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'
+              }`}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

@@ -163,12 +163,18 @@ const Contact = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
                   >
                     <option value="">{t('contact.form.tour.select')}</option>
-                    <option value="torres-del-paine">{t('tours.torres.title')}</option>
-                    <option value="ice-fields">{t('tours.ice.title')}</option>
-                    <option value="photography">{t('tours.photo.title')}</option>
-                    <option value="puma-tracking">{t('tours.puma.title')}</option>
-                    <option value="fitz-roy">{t('tours.fitz.title')}</option>
-                    <option value="culture-nature">{t('tours.culture.title')}</option>
+                    <option value="torres-del-paine">{t('tours.city_tour_natales.title')}</option>
+                    <option value="ice-fields">{t('tours.cabalgata_dorotea.title')}</option>
+                    <option value="photography">{t('tours.cabalgata_sofia.title')}</option>
+                    <option value="puma-tracking">{t('tours.cueva_milodon.title')}</option>
+                    <option value="fitz-roy">{t('tours.balmaceda_serrano.title')}</option>
+                    <option value="culture-nature">{t('tours.city_tour_punta_arenas.title')}</option>
+                    <option value="custom">{t('tours.isla_magdalena.title')}</option>
+                    <option value="custom">{t('tours.fuerte_bulnes.title')}</option>
+                    <option value="custom">{t('tours.full_day.title')}</option>
+                    <option value="custom">{t('tours.glaciar_grey.title')}</option>
+                    <option value="custom">{t('tours.perito_moreno_fd.title')}</option>
+                    <option value="custom">{t('tours.perito_moreno_ft.title')}</option>
                     <option value="custom">{t('contact.form.tour.custom')}</option>
                   </select>
                 </div>
