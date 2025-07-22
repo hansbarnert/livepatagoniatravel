@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send, Clock } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Mail, MapPin, Send, Clock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { FaWhatsapp } from 'react-icons/fa';
+import emailjs from "@emailjs/browser";
 const Contact = () => {
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
@@ -19,11 +20,28 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const formRef = useRef<HTMLFormElement>(null);
+
+
+  const handleSubmit = (e: any) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert(t('contact.form.success'));
+    if (!formRef.current) {
+      console.error("Formulario no está listo aún.");
+      return;
+    }
+    emailjs.sendForm(
+      "service_yhwuuvq",
+      "template_qvkq4sd",
+      formRef.current,
+      "zpRitC5JoMnC7Pus2"
+    )
+      .then(() => {
+        alert("¡Mensaje enviado!");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("Ocurrió un error al enviar el mensaje.");
+      });
   };
 
   return (
@@ -99,7 +117,7 @@ const Contact = () => {
           <div className="bg-white p-8 rounded-2xl shadow-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('contact.form.title')}</h3>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} ref={formRef} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.name')} *</label>
