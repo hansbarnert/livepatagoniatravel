@@ -10,32 +10,32 @@ const Gallery = () => {
 
   const images = [
     {
-      url: 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      url: 'galery_1.jpg',
       title: t('gallery.torres.title'),
       description: t('gallery.torres.desc')
     },
     {
-      url: 'https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      url: 'galery_2.jpg',
       title: t('gallery.lake.title'),
       description: t('gallery.lake.desc')
     },
     {
-      url: 'https://images.pexels.com/photos/2662816/pexels-photo-2662816.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      url: 'galery_3.jpg',
       title: t('gallery.glacier.title'),
       description: t('gallery.glacier.desc')
     },
     {
-      url: 'https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      url: 'galery_4.jpg',
       title: t('gallery.wildlife.title'),
       description: t('gallery.wildlife.desc')
     },
     {
-      url: 'https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      url: 'galery_5.jpg',
       title: t('gallery.wilderness.title'),
       description: t('gallery.wilderness.desc')
     },
     {
-      url: 'https://images.pexels.com/photos/2522667/pexels-photo-2522667.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      url: 'galery_6.jpg',
       title: t('gallery.fitz.title'),
       description: t('gallery.fitz.desc')
     }
@@ -106,7 +106,6 @@ const Gallery = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <h3 className="font-bold text-lg mb-1">{image.title}</h3>
-                  <p className="text-sm text-gray-200">{image.description}</p>
                 </div>
               </div>
             </div>
@@ -134,7 +133,6 @@ const Gallery = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-xl">
                       <div className="absolute bottom-4 left-4 right-4 text-white">
                         <h3 className="font-bold text-lg mb-1">{image.title}</h3>
-                        <p className="text-sm text-gray-200">{image.description}</p>
                       </div>
                     </div>
                   </div>
@@ -197,7 +195,6 @@ const Gallery = () => {
 
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
                 <h3 className="text-white font-bold text-xl mb-2">{images[currentImage].title}</h3>
-                <p className="text-gray-200">{images[currentImage].description}</p>
               </div>
 
               <button

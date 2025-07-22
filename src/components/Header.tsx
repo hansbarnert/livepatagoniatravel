@@ -33,8 +33,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <Mountain className={`h-8 w-8 transition-colors ${isScrolled ? 'text-blue-800' : 'text-white'
-              }`} />
+            <img src="logo-sin-letras.png" className="h-16 w-auto" alt="logo" />
             <span className={`text-xl font-bold transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'
               }`}>
               {t('company.name')}

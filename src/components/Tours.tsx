@@ -33,7 +33,7 @@ const Tours = () => {
       difficulty: 'Moderate',
       price: '$1,250',
       rating: 4.9,
-      image: 'https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'city_tour_natales.png',
       highlights: [t('tours.torres.highlight1'), t('tours.torres.highlight2'), t('tours.torres.highlight3'), t('tours.torres.highlight4')],
       category: 1
     },
@@ -46,7 +46,7 @@ const Tours = () => {
       difficulty: 'Moderate',
       price: '$1,250',
       rating: 4.9,
-      image: 'https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'cabalgata_dorotea.png',
       highlights: [t('tours.torres.highlight1'), t('tours.torres.highlight2'), t('tours.torres.highlight3'), t('tours.torres.highlight4')],
       category: 1
     },
@@ -59,7 +59,7 @@ const Tours = () => {
       difficulty: 'Moderate',
       price: '$1,250',
       rating: 4.9,
-      image: 'https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'cueva_milodon.png',
       highlights: [t('tours.torres.highlight1'), t('tours.torres.highlight2'), t('tours.torres.highlight3'), t('tours.torres.highlight4')],
       category: 1
     },
@@ -72,7 +72,7 @@ const Tours = () => {
       difficulty: 'Moderate',
       price: '$1,250',
       rating: 4.9,
-      image: 'https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'cabalgata_sofia.png',
       highlights: [t('tours.torres.highlight1'), t('tours.torres.highlight2'), t('tours.torres.highlight3'), t('tours.torres.highlight4')],
       category: 1
     },
@@ -85,7 +85,7 @@ const Tours = () => {
       difficulty: 'Moderate',
       price: '$1,250',
       rating: 4.9,
-      image: 'https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'balmaceda_serrano.png',
       highlights: [t('tours.torres.highlight1'), t('tours.torres.highlight2'), t('tours.torres.highlight3'), t('tours.torres.highlight4')],
       category: 1
     },
@@ -98,7 +98,7 @@ const Tours = () => {
       difficulty: 'Challenging',
       price: '$2,100',
       rating: 4.8,
-      image: 'https://images.pexels.com/photos/2662816/pexels-photo-2662816.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'city_tour_punta_arenas.png',
       highlights: [t('tours.ice.highlight1'), t('tours.ice.highlight2'), t('tours.ice.highlight3'), t('tours.ice.highlight4')],
       category: 2
     },
@@ -111,7 +111,7 @@ const Tours = () => {
       difficulty: 'Easy-Moderate',
       price: '$1,800',
       rating: 5.0,
-      image: 'https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'isla_magdalena.png',
       highlights: [t('tours.photo.highlight1'), t('tours.photo.highlight2'), t('tours.photo.highlight3'), t('tours.photo.highlight4')],
       category: 2
     },
@@ -124,7 +124,7 @@ const Tours = () => {
       difficulty: 'Easy',
       price: '$1,650',
       rating: 4.7,
-      image: 'https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'fuerte_bulnes.png',
       highlights: [t('tours.puma.highlight1'), t('tours.puma.highlight2'), t('tours.puma.highlight3'), t('tours.puma.highlight4')],
       category: 2
     },
@@ -137,7 +137,7 @@ const Tours = () => {
       difficulty: 'Challenging',
       price: '$1,950',
       rating: 4.9,
-      image: 'https://images.pexels.com/photos/2522667/pexels-photo-2522667.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'full_day.png',
       highlights: [t('tours.fitz.highlight1'), t('tours.fitz.highlight2'), t('tours.fitz.highlight3'), t('tours.fitz.highlight4')],
       category: 3
     },
@@ -150,7 +150,7 @@ const Tours = () => {
       difficulty: 'Easy',
       price: '$1,350',
       rating: 4.6,
-      image: 'https://images.pexels.com/photos/2662816/pexels-photo-2662816.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'base_torres.png',
       highlights: [t('tours.culture.highlight1'), t('tours.culture.highlight2'), t('tours.culture.highlight3'), t('tours.culture.highlight4')],
       category: 3
     },
@@ -163,7 +163,7 @@ const Tours = () => {
       difficulty: 'Easy',
       price: '$1,350',
       rating: 4.6,
-      image: 'https://images.pexels.com/photos/2662816/pexels-photo-2662816.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'glaciar_grey.png',
       highlights: [t('tours.culture.highlight1'), t('tours.culture.highlight2'), t('tours.culture.highlight3'), t('tours.culture.highlight4')],
       category: 3
     },
@@ -176,7 +176,7 @@ const Tours = () => {
       difficulty: 'Easy',
       price: '$1,350',
       rating: 4.6,
-      image: 'https://images.pexels.com/photos/2662816/pexels-photo-2662816.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'perito_moreno_fd.png',
       highlights: [t('tours.culture.highlight1'), t('tours.culture.highlight2'), t('tours.culture.highlight3'), t('tours.culture.highlight4')],
       category: 4
     },
@@ -189,7 +189,7 @@ const Tours = () => {
       difficulty: 'Easy',
       price: '$1,350',
       rating: 4.6,
-      image: 'https://images.pexels.com/photos/2662816/pexels-photo-2662816.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: 'perito_moreno_tc.png',
       highlights: [t('tours.culture.highlight1'), t('tours.culture.highlight2'), t('tours.culture.highlight3'), t('tours.culture.highlight4')],
       category: 4
     }

@@ -44,8 +44,8 @@ const TourCard = ({ tour }: Props) => {
 
                 <div className="flex items-center justify-between mt-auto pt-4">
                     <div>
-                        <span className="text-2xl font-bold text-gray-900">{tour.price}</span>
-                        <span className="text-gray-500 text-sm">{t("tours.person")}</span>
+                        {/* <span className="text-2xl font-bold text-gray-900">{tour.price}</span>
+                        <span className="text-gray-500 text-sm">{t("tours.person")}</span> */}
                     </div>
                     <a href="#contact">
                         <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition-colors duration-300">
