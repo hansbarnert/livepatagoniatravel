@@ -258,8 +258,8 @@ const Tours = () => {
 
         {isMobile ? (
           // Carrusel para móviles
-          <div className="block">
-            <div ref={sliderRef} className="keen-slider">
+          <div className="grid grid-cols-1">
+            <div key={filter_id} ref={sliderRef} className="keen-slider">
               {tours.filter(tour => tour.category === filter_id).map((tour) => (
                 <div key={tour.id} className="keen-slider__slide w-full p-4">
                   <TourCard tour={tour} />
@@ -275,9 +275,6 @@ const Tours = () => {
             ))}
           </div>
         )}
-
-
-
       </div>
     </section>
   );
