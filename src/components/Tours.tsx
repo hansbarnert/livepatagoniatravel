@@ -261,7 +261,7 @@ const Tours = () => {
           <div className="block">
             <div ref={sliderRef} className="keen-slider">
               {tours.filter(tour => tour.category === filter_id).map((tour) => (
-                <div key={tour.id} className="keen-slider__slide w-full px-4">
+                <div key={tour.id} className="keen-slider__slide w-full p-4">
                   <TourCard tour={tour} />
                 </div>
               ))}
