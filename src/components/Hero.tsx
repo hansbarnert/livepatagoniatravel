@@ -1,5 +1,4 @@
-import React from 'react';
-import { ArrowDown, Play } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero = () => {
@@ -23,7 +22,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
       </div>
 
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 pt-80">
+      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 pt-80 md:pt-0">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           {t('hero.title.1')}
           <span className="block bg-gradient-to-r from-blue-400 to-orange-500 bg-clip-text text-transparent">
