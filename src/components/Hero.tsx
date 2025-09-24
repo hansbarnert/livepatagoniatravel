@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden pb-32 sm:pb-0">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
       </div>
 
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 pt-80">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           {t('hero.title.1')}
           <span className="block bg-gradient-to-r from-blue-400 to-orange-500 bg-clip-text text-transparent">

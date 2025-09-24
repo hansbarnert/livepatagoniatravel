@@ -25,7 +25,7 @@ const translations = {
 
     // Services
     'services.title': 'Why Choose Our Adventures?',
-    'services.subtitle': 'With over 7 years of experience in Patagonian tourism, we offer unmatched expertise and unforgettable experiences in one of the world\'s last great wilderness areas.',
+    'services.subtitle': 'Herbert and Patricio are the founders of Live Patagonia Travel. They have been offering some of the best tours in the region for over 7 years, guiding travelers throughout the Magallanes Region, the Chilean and Argentine Patagonia, and even to the most remote places such as Ushuaia. We invite you to discover our wonderful Patagonia. If you are looking for reliability, professionalism, and quality service, take the leap and adventure with us.',
     'services.trekking.title': 'Trekking Adventures',
     'services.trekking.desc': 'Expert-guided treks through Torres del Paine and other iconic Patagonian landscapes',
     'services.photography.title': 'Photography Tours',
@@ -157,7 +157,7 @@ const translations = {
 
     // Services
     'services.title': '¿Por Qué Elegir Nuestras Aventuras?',
-    'services.subtitle': 'Herbert y Patricio son los fundadores de Live Patagonian Travel. Se dedican a entregar de los mejores tours en la zona desde hace más de 7 años, llevando viajeros a lo largo de la región de Magallanes, Patagonia Chilena y Argentina e incluso los lugares más remotos como lo es Ushuaia. Con la vasta y exitosa experiencia a la espalda de Live Patagonia Travel queremos dejar a vuestra disposición, viajero amante de la naturaleza nuestra hospitalidad y conocimiento adquiridos en estos años de servicio, con ello, te invitamos a conocer nuestra maravillosa patagonia. Si lo que buscas es confiabilidad, seriedad y calidad de servicio, atrévete y aventura con nosotros.',
+    'services.subtitle': 'Herbert y Patricio son los fundadores de Live Patagonia Travel. Se dedican a entregar de los mejores tours en la zona desde hace más de 7 años, llevando viajeros a lo largo de la región de Magallanes, Patagonia Chilena y Argentina e incluso los lugares más remotos como lo es Ushuaia. Con la basta y exitosa experiencia a la espalda de Live Patagonia Travel queremos dejar a vuestra disposición, viajero amante de la naturaleza nuestra hospitalidad y conocimiento adquiridos en estos años de servicio, con ello, te invitamos a conocer nuestra maravillosa patagonia. Si lo que buscas es confiabilidad, seriedad y calidad de servicio, atrévete y aventura con nosotros.',
     'services.trekking.title': 'Aventuras de Trekking',
     'services.trekking.desc': 'Caminatas guiadas por expertos a través de Torres del Paine y otros paisajes icónicos de la Patagonia',
     'services.photography.title': 'Tours de Fotografía',

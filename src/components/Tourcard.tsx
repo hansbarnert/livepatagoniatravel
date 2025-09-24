@@ -8,7 +8,7 @@ type Props = {
 
 const TourCard = ({ tour }: Props) => {
     const [expanded, setExpanded] = useState(false);
-    const { t } = useLanguage();
+    const { language, t } = useLanguage();
     const shouldTruncate = tour.description.length > 250;
     const displayedText = expanded
         ? tour.description
@@ -37,7 +37,8 @@ const TourCard = ({ tour }: Props) => {
                             onClick={() => setExpanded(!expanded)}
                             className="text-orange-500 font-bold text-sm mt-1 focus:outline-none"
                         >
-                            {expanded ? "ver menos" : "ver más"}
+                            {expanded ? (language === 'en' ? 'Español' : 'English') : null}
+
                         </button>
                     )}
                 </div>

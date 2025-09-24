@@ -11,15 +11,15 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Mountain className="h-8 w-8 text-orange-500" />
+              <img src="logo-lpt-completo.png" className="h-8 w-auto" alt="logo" />
               <span className="text-xl font-bold">{t('company.name')}</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
               {t('footer.company.desc')}
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.instagram.com/turismo.live.patagonia.travel/" className="text-gray-400 hover:text-orange-500 transition-colors">
-                <Instagram className="h-5 w-5" />
+              <a href="https://www.instagram.com/turismo.live.patagonia.travel/" className="text-gray-400 hover:text-orange-500 transition-colors flex gap-2">
+                <Instagram className="h-25 w-25" />@livepatagoniatravel
               </a>
             </div>
           </div>
