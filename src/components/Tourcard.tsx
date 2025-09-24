@@ -37,8 +37,7 @@ const TourCard = ({ tour }: Props) => {
                             onClick={() => setExpanded(!expanded)}
                             className="text-orange-500 font-bold text-sm mt-1 focus:outline-none"
                         >
-                            {expanded ? (language === 'en' ? 'Español' : 'English') : null}
-
+                            {expanded ? t("tour.card.seeless") : t("tour.card.seemore")}
                         </button>
                     )}
                 </div>

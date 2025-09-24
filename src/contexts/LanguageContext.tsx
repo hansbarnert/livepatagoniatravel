@@ -137,7 +137,10 @@ const translations = {
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
     'footer.cookies': 'Cookie Policy',
-    'footer.about': 'About Us'
+    'footer.about': 'About Us',
+
+    'tour.card.seemore': 'see more',
+    'tour.card.seeless': 'see less'
   },
   es: {
     // Header
@@ -270,7 +273,10 @@ const translations = {
     'footer.privacy': 'Política de Privacidad',
     'footer.terms': 'Términos de Servicio',
     'footer.cookies': 'Política de Cookies',
-    'footer.about': 'Acerca de Nosotros'
+    'footer.about': 'Acerca de Nosotros',
+
+    'tour.card.seemore': 'ver más',
+    'tour.card.seeless': 'ver menos'
   }
 };
 
