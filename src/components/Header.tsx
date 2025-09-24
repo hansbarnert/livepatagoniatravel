@@ -73,7 +73,7 @@ const Header = () => {
 
         {isOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 p-4">
-            {['tours', 'services', 'gallery', 'testimonials', 'contact'].map((item) => (
+            {['tours', 'services', 'gallery', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
